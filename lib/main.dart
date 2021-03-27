@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medium_stories_test/il-ilce-secimi/il_ilce_secimi.dart';
+import 'package:medium_stories_test/screenshot-of-widget/screenshot_of_widget.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => Home(),
         '/ililcesicimi': (context) => IlIlceSecimi(),
+        '/screenshotofwidget': (context) => ScreenshotOfWidget(),
       },
     );
   }
@@ -43,6 +45,13 @@ class Home extends StatelessWidget {
                 Navigator.pushNamed(context, '/ililcesicimi');
               },
               child: Text("Il Ilçe Seçimi"),
+            ),
+            ElevatedButton(
+              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.amber)),
+              onPressed: () {
+                Navigator.pushNamed(context, '/screenshotofwidget');
+              },
+              child: Text("Screenshot of Widget"),
             ),
           ],
         ),
